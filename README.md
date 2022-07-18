@@ -1,1 +1,1 @@
-# manual-image-classifier
+# Manual Image Classifier
