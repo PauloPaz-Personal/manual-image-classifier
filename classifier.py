@@ -135,7 +135,7 @@ class GUI(QtWidgets.QMainWindow):
                 QtWidgets.QMessageBox.information(self, 'All images classified',
                                                   'All images have been classified.')
                 self.classified = True
-         self.image_index += 1
+        self.image_index += 1
         
     def update_image(self):
         self.image_label.setPixmap(QtGui.QPixmap(
