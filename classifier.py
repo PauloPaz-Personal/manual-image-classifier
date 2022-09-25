@@ -127,7 +127,6 @@ class GUI(QtWidgets.QMainWindow):
         self.update_image()
 
     def right_arrow_clicked(self):
-        self.image_index += 1
         self.update_image()
         if self.image_index >= len(images):
             self.image_index = 0
@@ -136,7 +135,8 @@ class GUI(QtWidgets.QMainWindow):
                 QtWidgets.QMessageBox.information(self, 'All images classified',
                                                   'All images have been classified.')
                 self.classified = True
-
+         self.image_index += 1
+        
     def update_image(self):
         self.image_label.setPixmap(QtGui.QPixmap(
             'images/' + images[self.image_index]))
