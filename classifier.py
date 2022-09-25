@@ -33,6 +33,12 @@ except FileNotFoundError:
         writer = csv.writer(f)
         writer.writerows(dataset)
 
+# check if images folder exists	
+if not os.path.exists('images'):	
+    os.makedirs('images')	
+    print('Created images folder, please add images to it.')	
+    sys.exit()	
+    
 # get all images in the images folder
 images = [f for f in os.listdir('images')]
 # check if list if images is empty
